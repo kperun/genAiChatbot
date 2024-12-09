@@ -47,7 +47,7 @@ def update_output(n_clicks, value):
             html.Div('Answer: ' + response),
             html.Div('Source:' + file + ', page ' + page) if file is not None else None
         ])
-        history.append({'question':value, 'answer': response, 'source': file, 'page':page})
+        history.append({'question': value, 'answer': response, 'source': file, 'page': page})
         history_box = dash_table.DataTable(history)
         return textarea, message, history_box
     else:
